@@ -87,23 +87,23 @@ image colorize_sobel(image im);
 image smooth_image(image im, float sigma);
 
 // Harris and Stitching
-image structure_matrix(image im, float sigma);
-image cornerness_response(image S);
-void free_descriptors(descriptor *d, int n);
-image cylindrical_project(image im, float f);
-void mark_corners(image im, descriptor *d, int n);
-image find_and_draw_matches(image a, image b, float sigma, float thresh, int nms);
-void detect_and_draw_corners(image im, float sigma, float thresh, int nms);
-int model_inliers(matrix H, match *m, int n, float thresh);
-image combine_images(image a, image b, matrix H);
-match *match_descriptors(descriptor *a, int an, descriptor *b, int bn, int *mn);
-descriptor *harris_corner_detector(image im, float sigma, float thresh, int nms, int *n);
-image panorama_image(image a, image b, float sigma, float thresh, int nms, float inlier_thresh, int iters, int cutoff);
+// image structure_matrix(image im, float sigma);
+// image cornerness_response(image S);
+// void free_descriptors(descriptor *d, int n);
+// image cylindrical_project(image im, float f);
+// void mark_corners(image im, descriptor *d, int n);
+// image find_and_draw_matches(image a, image b, float sigma, float thresh, int nms);
+// void detect_and_draw_corners(image im, float sigma, float thresh, int nms);
+// int model_inliers(matrix H, match *m, int n, float thresh);
+// image combine_images(image a, image b, matrix H);
+// match *match_descriptors(descriptor *a, int an, descriptor *b, int bn, int *mn);
+// descriptor *harris_corner_detector(image im, float sigma, float thresh, int nms, int *n);
+// image panorama_image(image a, image b, float sigma, float thresh, int nms, float inlier_thresh, int iters, int cutoff);
 
-// Optical Flow
-image optical_flow_images(image im, image prev, int smooth, int stride);
-void optical_flow_webcam(int smooth, int stride, int div);
-void draw_flow(image im, image v, float scale);
+// // Optical Flow
+// image optical_flow_images(image im, image prev, int smooth, int stride);
+// void optical_flow_webcam(int smooth, int stride, int div);
+// void draw_flow(image im, image v, float scale);
 
 #ifndef __cplusplus
     #ifdef OPENCV
